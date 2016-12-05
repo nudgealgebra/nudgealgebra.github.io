@@ -1,8 +1,7 @@
 # Site settings
 title: Nudge
 email:
-description: An interactive problem solving platform that provides
-a personal tutor experience
+description: An interactive problem solving platform that provides a personal tutor experience
 
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
 url: "https://nudgealgebra.github.io" # the base hostname & protocol for your site
