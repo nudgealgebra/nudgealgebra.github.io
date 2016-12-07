@@ -5,7 +5,7 @@ description: "A Clean Blog Theme by Start Bootstrap"
 header-img: "img/post-bg-01.jpg"
 ---
 
-<div class="container-fluid index">
+<!--div class="container-fluid index">
   <div class="row index all-posts">
 
     <h1 class="header author-header">{{ site.author_name }}</h1>
@@ -30,9 +30,9 @@ header-img: "img/post-bg-01.jpg"
           {% for posts in category %}
             {% for post in posts %}
               <li>
-                <hr>
+                <hr-->
                 <!-- problem of for cycle can't use images <img src="/{{ post.header-img | prepend: site.baseurl }}" class="img-responsive" alt="{{ post.title }}"> -->
-                <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                <!--h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
                 <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
               </li>
             {% endfor %}
@@ -42,4 +42,4 @@ header-img: "img/post-bg-01.jpg"
       </div>
       {% endfor %}
   </div>
-</div>
+</div-->
