@@ -1,46 +1,37 @@
-#New Age Jekyll theme
-=========================
+# [Start Bootstrap](http://startbootstrap.com/) - [Agency](http://startbootstrap.com/template-overviews/agency/)
 
-## If you are a company and you're going to use the blog: 
-1. contact bootstrap start up and ask.
-2. contact me because there is to remove some useless part.
+[Agency](http://startbootstrap.com/template-overviews/agency/) is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, a responsive timeline, and a working PHP contact form.
 
-Jekyll theme based on [New Age bootstrap theme ](https://startbootstrap.com/template-overviews/new-age/)
+## Getting Started
 
-# Demo
-View this jekyll theme in action [here](https://jekynewage.github.io/)
+Several options are available to get started quickly:
+* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/agency/)
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-agency.git`
+* Fork the repo
 
-## Built by
-[Antonio Trento](https://it.linkedin.com/in/antoniotrento)
+## Developing Using Source Files
 
-This Jekyll template was created to develop, landing pages, squeeze pages, portfolio and blog or all the above.
+To use the source files, you will need to have npm installed globally along with Gulp.js. To start:
+* Run `npm install` in the root directory
+* Run `gulp dev` and edit the files as needed
 
-###I integrated analytical tools and marketing such as:
-- Google Ad Words
-- Google analytics
-- Disqus comment system
-- Add This social sharing
+If you need to update the plugins included with this template, simply run the following tasks:
+* First run `npm update` to update the dependencies
+* Then run `gulp copy` to copy the new versions to their proper destinations
 
->>External stylesheets and libraries included are Google Fonts, Font Awesome, Normalize.CSS, and WOW.js
+## Bugs and Issues
 
-In order to set your log data to applications _config.yml just open the file and find the associated items.
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-agency/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/agency/).
 
-I also built a system to add their own names on the same company files
+## Creator
 
-**To change the base colors yellow go in css folder there main.css where you can set the primary color and the secondary color, remember that the theme is gradient in the background areas**
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
 
-If you are interested in implementing this theme please contact me without any problems I will do what is in my power to help you!
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-If you have noticed anything unusual or errors in my development I ask you kindly let me know or send a pull request!
+## Copyright and License
 
-Any opinion and critical comment is welcome! So give us inside!
-
-We can get in touch by:
-
-1. By <a href="https://twitter.com/lantoniotrento">twitter</a>
-2. mail <a href="mailto:lantoniotrento@gmail.com">lantoniotrento[at]gmail.com</a>
-3. Via <a href="https://it.linkedin.com/in/antoniotrento">LinkedIn</a>
-
-=========
-For more details, read the [documentation](http://jekyllrb.com/)
+Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE) license.
