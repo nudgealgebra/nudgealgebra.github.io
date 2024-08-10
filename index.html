@@ -75,6 +75,9 @@
                         <a class="nav-link page-scroll" href="#features">FEATURES</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#referral">REFERRAL</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link page-scroll" href="privacy-policy.html">PRIVACY POLICY</a>
                     </li>
                     <!-- Dropdown Menu - ->          
@@ -211,14 +214,15 @@
                         </ul>                        
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
-                <div class="col-lg-6 button-container">
-                    <div class="app-heading-txt">Download Now and Try Before You Buy</div>
+                <div id="downloads" class="col-lg-6 button-container">
+                    
+                    <div  class="app-heading-txt">Download Now and Try Before You Buy</div>
                     <div class="btn-container">
-                        <a class="dl-apple-btn"  href="sign-up.html"><i class="fab fa-google-play"></i><span>google play</span></a>
+                        <a class="dl-apple-btn"  href="https://play.google.com/store/apps/details?id=com.Benciti.NudgeGrade6&pcampaignid=web_share" target="_blank"><i class="fab fa-google-play"></i><span>google play</span></a>
                         <!-- <a class="mu-windows-btn" href="#"><i class="fa fa-windows"></i><span>windows store</span></a> -->
                     </div>
                     <div class="btn-container">
-                        <a class="dl-apple-btn" href="sign-up.html"><i class="fab fa-apple"></i><span>apple store</span></a>
+                        <a class="dl-apple-btn" href="https://www.apple.com/in/app-store/" target="_blank"><i class="fab fa-apple"></i><span>apple store</span></a>
                         <!-- <a class="mu-windows-btn" href="#"><i class="fa fa-windows"></i><span>windows store</span></a> -->
                     </div>
                 </div> <!-- end of col -->
@@ -237,18 +241,19 @@
                     <!-- Video Preview - ->
                     <div class="image-container">
                         <div class="video-wrapper">
-                            <a class="popup-youtube" href="https://youtu.be/QC91ITzI6j4?si=suHffafqb2JbJ3zf" data-effect="fadeIn">
+                            <!a class="popup-youtube" href="https://youtu.be/QC91ITzI6j4?si=suHffafqb2JbJ3zf" data-effect="fadeIn">
                                 <img class="img-fluid" src="images/video-image.png" alt="alternative">
                                 <span class="video-play-button">
                                     <span></span>
                                 </span>
-                            </a>
+                            </a> 
                         </div> <!-- end of video-wrapper -->
 
                         <div class="embed-responsive embed-responsive-16by9" align="center">
                             <!--  iframe src="https://youtube.com/embed/QC91ITzI6j4" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe -->
 
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Mpwf6WroBcE?si=5oiNMUKUhy0cRlNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                            <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/Mpwf6WroBcE?si=5oiNMUKUhy0cRlNk?autoplay=0&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
                         </div>
@@ -337,130 +342,77 @@
     <!-- end of features -->
 
 
-    <!-- Details Lightboxes -->
-    <!-- Details Lightbox 1 -->
-	<div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="container">
-            <div class="row">
-                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-                <div class="col-lg-8">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/details-lightbox.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <h3>List Building</h3>
-                    <hr>
-                    <h5>Core service</h5>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">List building framework</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Easy database browsing</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">User administration</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Automate user signup</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Quick formatting tools</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Fast email checking</div>
-                        </li>
-                    </ul>
-                    <a class="btn-solid-reg mfp-close" href="sign-up.html">SIGN UP</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of details lightbox 1 -->
 
-    <!-- Details Lightbox 2 -->
-	<div id="details-lightbox-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="container">
-            <div class="row">
-                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-                <div class="col-lg-8">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/details-lightbox.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <h3>Campaign Monitoring</h3>
-                    <hr>
-                    <h5>Core service</h5>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">List building framework</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Easy database browsing</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">User administration</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Automate user signup</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Quick formatting tools</div>
-                        </li>
-                        <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Fast email checking</div>
-                        </li>
-                    </ul>
-                    <a class="btn-solid-reg mfp-close" href="sign-up.html">SIGN UP</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of details lightbox 2 -->
 
-    <!-- Details Lightbox 3 -->
-	<div id="details-lightbox-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="container">
-            <div class="row">
-                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-                <div class="col-lg-8">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/details-lightbox.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <h3>Analytics Tools</h3>
-                    <hr>
-                    <h5>Core service</h5>
+
+
+<!-- Referral -->
+<div id="referral" class="basic-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="h2-heading">📚 Join Our Math Mission! 🎉</h2>
+                <span class="app-sub-txt">Spread the word about NudgeMath Class 6 CBSE and earn a little reward for your effort!</span>
+                <ul class="list-unstyled li-space-lg top-list">
+                    <li class="media">
+                        <div class="media-body">🔹 Refer friends and family to our app</div>
+                    </li>
+                    <li class="media">
+                        <div class="media-body">🔹 If they make a purchase, you’ll receive a small thank-you gift from us!</div>
+                    </li>
+                </ul>          
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        
+        <div class="row">            
+            <div class="col-lg-6">
+                <div class="image-container">
+                    <img class="img-fluid" src="images/annual_pack_details.png" alt="alternative">
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-6 " >
+                <div class="text-container">
+                    <div class="app-heading-txt">How to Claim Your Bonus?</div>
                     <ul class="list-unstyled li-space-lg">
                         <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">List building framework</div>
+                            <div> <strong>-</strong></div>
+                            <div class="media-body">&nbsp;&nbsp;Email us the address of the parent who registered for reports using your referral</div>
                         </li>
                         <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Easy database browsing</div>
+                            <div> <strong>-</strong></div>
+                            <div class="media-body">&nbsp;&nbsp;The bonus is awarded to the first claimant only after verification</div>
                         </li>
                         <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">User administration</div>
+                            <div> <strong>&nbsp;&nbsp;</strong></div>
                         </li>
                         <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Automate user signup</div>
+                            <div class="media-body">Cost of Annual pack: <strong>Rs5,900/-</strong> </div>
                         </li>
                         <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Quick formatting tools</div>
+                            <div class="media-body">Referral bonus: <strong>Rs600/-</strong> </div>
                         </li>
                         <li class="media">
-                            <i class="fas fa-square"></i><div class="media-body">Fast email checking</div>
+                            <div> <strong>&nbsp;&nbsp;</strong></div>
                         </li>
-                    </ul>
-                    <a class="btn-solid-reg mfp-close" href="sign-up.html">SIGN UP</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of details lightbox 3 -->
-    <!-- end of details lightboxes -->
+                        <li class="media">
+                            <div class="media-body">*Referral program ends on <strong>30th Sep 2024</strong> </div>
+                        </li>
+                    </ul>                        
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+
+    </div> <!-- end of container -->
+</div> <!-- end of tabs -->
+<!-- end of features -->
+
+
+
+
+
+
+
+    
 
     <!-- Footer -->
     <svg class="footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 79"><defs><style>.cls-2{fill:#0d69d9;}</style></defs><title>footer-frame</title><path class="cls-2" d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z" transform="translate(0 -0.188)"/></svg>
