@@ -28,6 +28,64 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
+    <script>
+    /**
+     * NudgeMath smart redirect (homepage)
+     * Triggers only when URL has ?download=1 (from QR).
+     * - Android  -> Google Play
+     * - iOS/iPad -> App Store
+     * - Desktop/other -> no redirect (stays on homepage)
+     * Bypass (for testing): add &no_redirect=1
+     */
+    (function () {
+      // --- UPDATE THESE TO YOUR LIVE STORE LINKS ---
+      var PLAY_URL     = "https://play.google.com/store/apps/details?id=com.nudgemath.app"; // <-- change
+      var APPSTORE_URL = "https://apps.apple.com/app/id1234567890";                          // <-- change
+
+      var qs = new URLSearchParams(window.location.search);
+      if (qs.get("download") !== "1") return;             // only run for QR traffic
+      if (qs.get("no_redirect") === "1") return;          // manual bypass
+
+      // basic UTM tagging for attribution
+      function withUtm(url) {
+        try {
+          var u = new URL(url);
+          if (!u.searchParams.has("utm_source"))   u.searchParams.set("utm_source", "print");
+          if (!u.searchParams.has("utm_medium"))   u.searchParams.set("utm_medium", "qr");
+          if (!u.searchParams.has("utm_campaign")) u.searchParams.set("utm_campaign", "download");
+          return u.toString();
+        } catch (e) {
+          var sep = url.indexOf("?") === -1 ? "?" : "&";
+          return url + sep + "utm_source=print&utm_medium=qr&utm_campaign=download";
+        }
+      }
+
+      // device detection
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+      var isAndroid = /android/i.test(ua);
+      var isiOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+      // iPadOS 13+ often identifies as Mac
+      var isIpadOS = (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+      // small visual cue (optional)
+      try {
+        var note = document.createElement("div");
+        note.textContent = "Taking you to the app store…";
+        note.style.cssText = "position:fixed;left:50%;top:20px;transform:translateX(-50%);background:#0a51a8;color:#fff;padding:8px 12px;border-radius:8px;font:500 14px system-ui, -apple-system, Segoe UI, Roboto;";
+        document.addEventListener("DOMContentLoaded", function(){ document.body.appendChild(note); });
+        setTimeout(function(){ if (note && note.parentNode) note.parentNode.removeChild(note); }, 4000);
+      } catch(e) {}
+
+      // do the redirect
+      if (isAndroid) {
+        window.location.replace(withUtm(PLAY_URL));
+      } else if (isiOS || isIpadOS) {
+        window.location.replace(withUtm(APPSTORE_URL));
+      } else {
+        // desktop/unknown: do nothing (stay on homepage)
+      }
+    })();
+    </script>
 
     
     <header class="header">
