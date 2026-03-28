@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="NudgeMath — Step-by-step math practice aligned with Common Core standards. Builds independent learning and confidence. Designed for students, trusted by teachers and parents. Free on App Store and Play Store.">
-    <meta name="keywords" content="NudgeMath, Math Practice, Step-by-step Learning, Math App, Self-paced Math, Math for Students, Math Confidence, Elementary Math, Free Math App"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NudgeMath for Schools — structured, step-by-step math practice with instant error detection, action-triggered nudges, and full teacher visibility. Grades 4-6, CBSE, ICSE, Cambridge.">
+    <meta name="keywords" content="NudgeMath, math practice for schools, structured math practice, classroom math, teacher portal, step-by-step math, school math app, CBSE math, ICSE math, Cambridge math">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NudgeMath | Step-by-Step Math Practice for Students</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <title>NudgeMath for Schools | Structured Math Practice for Every Classroom</title>
+    <link rel="icon" type="image/png" href="img/favicon.png?v=2">
 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    
+
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -38,15 +38,13 @@
      * Bypass (for testing): add &no_redirect=1
      */
     (function () {
-      // --- UPDATE THESE TO YOUR LIVE STORE LINKS ---
-      var PLAY_URL     = "https://play.google.com/store/apps/details?id=com.benciti.nudgemath"; // <-- change
-      var APPSTORE_URL = "https://apps.apple.com/us/app/nudgemath/id6739328770";                // <-- change
+      var PLAY_URL     = "https://play.google.com/store/apps/details?id=com.benciti.nudgemath";
+      var APPSTORE_URL = "https://apps.apple.com/us/app/nudgemath/id6739328770";
 
       var qs = new URLSearchParams(window.location.search);
-      if (qs.get("download") !== "1") return;             // only run for QR traffic
-      if (qs.get("no_redirect") === "1") return;          // manual bypass
+      if (qs.get("download") !== "1") return;
+      if (qs.get("no_redirect") === "1") return;
 
-      // basic UTM tagging for attribution
       function withUtm(url) {
         try {
           var u = new URL(url);
@@ -60,40 +58,34 @@
         }
       }
 
-      // device detection
       var ua = navigator.userAgent || navigator.vendor || window.opera;
       var isAndroid = /android/i.test(ua);
       var isiOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-      // iPadOS 13+ often identifies as Mac
       var isIpadOS = (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
-      // small visual cue (optional)
       try {
         var note = document.createElement("div");
-        note.textContent = "Taking you to the app store…";
+        note.textContent = "Taking you to the app store...";
         note.style.cssText = "position:fixed;left:50%;top:20px;transform:translateX(-50%);background:#0a51a8;color:#fff;padding:8px 12px;border-radius:8px;font:500 14px system-ui, -apple-system, Segoe UI, Roboto;";
         document.addEventListener("DOMContentLoaded", function(){ document.body.appendChild(note); });
         setTimeout(function(){ if (note && note.parentNode) note.parentNode.removeChild(note); }, 4000);
       } catch(e) {}
 
-      // do the redirect
       if (isAndroid) {
         window.location.replace(withUtm(PLAY_URL));
       } else if (isiOS || isIpadOS) {
         window.location.replace(withUtm(APPSTORE_URL));
-      } else {
-        // desktop/unknown: do nothing (stay on homepage)
       }
     })();
     </script>
 
-    
+
     <header class="header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="img/logo.png" alt="NudgeMath"></a>
                     </div>
                 </div>
                 <div class="col-lg-10">
@@ -101,14 +93,14 @@
                         <nav class="header__nav__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./index.html#about">About</a></li>
+                                <li><a href="./index.html#how-it-works">How It Works</a></li>
+                                <li><a href="./index.html#for-schools">For Schools</a></li>
+                                <li><a href="./index.html#results">Results</a></li>
+                                <li><a href="./index.html#plans">Plans</a></li>
                                 <li><a href="./index.html#gallery">Gallery</a></li>
-                                <li><a href="./index.html#schools">For Schools</a></li>
-                                <li><a href="./index.html#parents">For Parents</a></li>
-                                <li><a href="./index.html#testimonials">Testimonials</a></li>
-                                <li><a href="./index.html#contact">Contact</a></li>
+                                <li><a href="./index.html#home-learning">Home Learning</a></li>
                                 <li><a href="./story.html">Our Story</a></li>
-                                <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="./index.html#contact">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -117,214 +109,462 @@
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    
-
-    
-    
 
 
-    <section class="hero set-bg" data-setbg="img/hero/hero-bg.png" style="min-height: 70vh; display: flex; align-items: center;">
-    <div class="container">
-        <div class="row align-items-center">
-            
-            <div class="col-lg-6 col-md-12 text-center text-lg-left">
-                <div class="hero__text">
-                    <h2>Learning, As It Should Be<br>— with NudgeMath</h2>
 
-                    <div class="free-app">
-                        
-                      <div class="services__item__text">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-12">
+                    <div class="hero__text">
+                        <p class="hero-eyebrow">NudgeMath for Schools &middot; Grades 4-6</p>
+                        <h2>Structured, Teacher-Driven Math Practice</h2>
+                        <p class="hero-subtext">
+                            Math improves only when students practice consistently and mistakes are corrected immediately — but correcting every step for every child isn't scalable.
+                        </p>
+                        <p class="hero-solve"><strong>NudgeMath solves this.</strong></p>
+                        <ul class="hero-points">
+                            <li><strong>Every step is validated</strong> — not just final answers</li>
+                            <li><strong>Mistakes caught instantly</strong> — the moment they happen</li>
+                            <li><strong>Targeted hints</strong> based on the actual error</li>
+                            <li><strong>No skipping, no copying</strong> — students must think</li>
+                        </ul>
+                        <p class="hero-teacher-line">Teachers assign targeted work and track progress — with full visibility into every student's effort.</p>
+                        <a href="#contact" class="site-btn hero-cta-primary">Start a Free School Pilot</a>
+                        <p class="hero-meta">Cambridge &middot; CBSE &middot; ICSE &middot; State Boards</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 text-center hero-mascot-col">
+                    <img src="img/hero/hero-mascot.png?v=2" alt="NudgeMath Mascot" class="hero-mascot-img">
+                    <div class="hero-intro-btn-wrap">
+                        <a href="#hero-video" class="hero-cta-secondary-btn">Introduction</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== INTRO VIDEO ===================== -->
+    <section class="intro-video spad" id="hero-video">
+        <div class="container">
             <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title center-title">
+                        <span>Why NudgeMath</span>
+                        <h2>What Makes NudgeMath Different for Schools</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="intro-video-wrapper">
+                        <!-- PLACEHOLDER: Replace VIDEO_ID_PLACEHOLDER with actual YouTube video ID -->
+                        <iframe width="100%" height="400"
+                            src="https://www.youtube-nocookie.com/embed/QjIxQYrsWvo?rel=0"
+                            title="NudgeMath Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                   <h4 style="color: #ffffff;">Available Now — And It’s Free</h3>
-                   <p>
-                        &ndash; Grades 4 & 5 for Common Core, CBSE, ICSE & Cambridge<br>
-                        &ndash; Grade 6 for CBSE
-                   </p>
-                 </div>
-              </div>
 
 
-                        <div class="store-buttons" style="display: flex; justify-content: left; gap: 10px;">
-                            <a href="https://apps.apple.com/us/app/nudgemath/id6739328770" class="store-btn">
-                                <img src="img/stores/app-store.svg" alt="Download on App Store">
-                            </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.benciti.nudgemath" class="store-btn">
-                                <img src="img/stores/play-store.svg" alt="Download on Play Store">
-                            </a>
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="services spad" id="how-it-works">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title center-title">
+                        <span>How It Works</span>
+                        <h2>How NudgeMath Works</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 1: Image left, Text right -->
+            <div class="row align-items-center how-row">
+                <div class="col-lg-6 col-md-12 text-center">
+                    <img src="img/features/step-by-step.jpg" alt="Step-by-Step Solving" loading="lazy" class="how-row-img">
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="how-row-text">
+                        <h4>Step-by-Step Solving</h4>
+                        <p>Students work through every step of every problem — the way they would on paper. No multiple choice. No shortcuts. Every intermediate step is validated.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Text left, Image right -->
+            <div class="row align-items-center how-row flex-row-reverse">
+                <div class="col-lg-6 col-md-12 text-center">
+                    <img src="img/features/hints.jpg" alt="Action-Triggered Nudges" loading="lazy" class="how-row-img">
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="how-row-text">
+                        <h4>Action-Triggered Nudges</h4>
+                        <p>The system watches what the student does at each step and intervenes precisely when a mistake occurs. The right hint, at the right moment, based on what the child actually did wrong.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: Image left, Text right -->
+            <div class="row align-items-center how-row">
+                <div class="col-lg-6 col-md-12 text-center">
+                    <img src="img/features/mastery.jpg" alt="No Shortcuts or Copying" loading="lazy" class="how-row-img">
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="how-row-text">
+                        <h4>No Shortcuts, No Copying</h4>
+                        <p>Every step must be completed and validated. There is no way to skip ahead or copy a final answer. The student must think through the problem.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 4: Text left, Image right -->
+            <div class="row align-items-center how-row flex-row-reverse">
+                <div class="col-lg-6 col-md-12 text-center">
+                    <img src="img/features/visual-fraction.jpg" alt="Interactive Tools" loading="lazy" class="how-row-img">
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="how-row-text">
+                        <h4>Visual & Interactive Tools</h4>
+                        <p>Fractions, angles, compass-and-ruler constructions, line plots, symmetry — purpose-built interactive tools that mirror real classroom instruments.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher Portal Screenshot -->
+            <div class="row" style="margin-top: 70px;">
+                <div class="col-lg-12 text-center">
+                    <h4 style="color: #ffffff; margin-bottom: 24px; font-size: 22px;">Teacher Portal</h4>
+                    <div style="max-width: 900px; margin: 0 auto; overflow: hidden; border-radius: 12px; border: 2px solid rgba(91,163,230,0.3); box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                        <video autoplay muted loop playsinline
+                             style="width: 112%; margin-left: -6%; margin-top: 0%; margin-bottom: -6%; display: block;">
+                            <source src="img/features/teacher-portal.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p style="color: #8891A0; margin-top: 1rem; font-size: 14px;">Assignments, progress reports, and learning gap visibility at a glance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===================== WHAT MAKES NUDGEMATH DIFFERENT ===================== -->
+    <section class="comparison spad" id="comparison">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title center-title">
+                        <span>The Difference</span>
+                        <h2>What Makes NudgeMath Different</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="comparison-table-wrapper">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Typical Math Apps</th>
+                                    <th>AI Tutors</th>
+                                    <th class="comparison-highlight">NudgeMath</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="comparison-row-label">Input format</td>
+                                    <td>Final answer / MCQ</td>
+                                    <td>Chat-based Q&A</td>
+                                    <td class="comparison-highlight">Full step-by-step working</td>
+                                </tr>
+                                <tr>
+                                    <td class="comparison-row-label">Error detection</td>
+                                    <td>After submission</td>
+                                    <td>When student asks</td>
+                                    <td class="comparison-highlight">At each step, live</td>
+                                </tr>
+                                <tr>
+                                    <td class="comparison-row-label">Feedback trigger</td>
+                                    <td>Student submits</td>
+                                    <td>Student asks</td>
+                                    <td class="comparison-highlight">Student's action — automatic</td>
+                                </tr>
+                                <tr>
+                                    <td class="comparison-row-label">Answer copying</td>
+                                    <td>Easy to bypass</td>
+                                    <td>Generates full solutions</td>
+                                    <td class="comparison-highlight">Structurally impossible</td>
+                                </tr>
+                                <tr>
+                                    <td class="comparison-row-label">Hallucination risk</td>
+                                    <td>N/A</td>
+                                    <td>Yes — can teach wrong methods</td>
+                                    <td class="comparison-highlight">None — AI-free student experience</td>
+                                </tr>
+                                <tr>
+                                    <td class="comparison-row-label">Classroom tools</td>
+                                    <td>None</td>
+                                    <td>None</td>
+                                    <td class="comparison-highlight">Compass, protractor, ruler</td>
+                                </tr>
+                                <tr>
+                                    <td class="comparison-row-label">Teacher visibility</td>
+                                    <td>Completion rates</td>
+                                    <td>Limited</td>
+                                    <td class="comparison-highlight">Step-level progress data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="comparison-ai-note">
+                        <h4>Designed for an AI World</h4>
+                        <p>NudgeMath is built with AI — and deliberately keeps it away from students. AI powers content generation, error analysis, and hint design behind the scenes. But the student experience is entirely AI-free. No chatbot. No generated responses. No hallucinations. Every problem, hint, and piece of feedback is authored and validated by our team.</p>
+                        <p style="margin-top: 15px;"><strong style="color: #5BA3E6;">Students who build strong foundations through independent practice are the ones best equipped to use AI effectively and responsibly.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===================== FOR SCHOOLS ===================== -->
+    <section class="for-schools spad" id="for-schools">
+        <div class="container">
+            <div class="section-title center-title">
+                <span>The Solution</span>
+                <h2>NudgeMath for Schools</h2>
+            </div>
+            <div class="row flex-card-row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="audience-card">
+                        <h4>For Students</h4>
+                        <ul>
+                            <li>Step-by-step solving that builds real understanding</li>
+                            <li>Instant feedback at every step — no waiting</li>
+                            <li>Interactive tools: compass, protractor, ruler, fraction bars</li>
+                            <li>Works on iPad, Windows, and Android</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="audience-card">
+                        <h4>For Teachers</h4>
+                        <ul>
+                            <li>Assign practice aligned to your lesson plan</li>
+                            <li>Track who started, completed, and needs help</li>
+                            <li>Student and class-level progress reports</li>
+                            <li>Web-based Teacher Portal — nothing to install</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="audience-card">
+                        <h4>For Schools</h4>
+                        <ul>
+                            <li>Standardised practice across sections and grades</li>
+                            <li>Data-driven visibility into learning gaps</li>
+                            <li>Consistent pedagogy — reduced teacher dependency</li>
+                            <li>Works in math labs, classrooms, and at home</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Use cases -->
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-lg-12 text-center">
+                    <h4 style="color: #ffffff; margin-bottom: 20px;">Use Cases</h4>
+                    <div class="use-case-tags">
+                        <span class="use-case-tag">Daily Practice</span>
+                        <span class="use-case-tag">Homework & Revision</span>
+                        <span class="use-case-tag">Remedial Support</span>
+                        <span class="use-case-tag">Enrichment</span>
+                        <span class="use-case-tag">Math Lab Sessions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===================== PILOT RESULTS ===================== -->
+    <section class="results spad" id="results">
+        <div class="container">
+            <div class="section-title center-title">
+                <span>Proven in Classrooms</span>
+                <h2>Pilot Results</h2>
+                <p style="color: #8899AA; font-size: 16px; margin-top: 10px;">Sep 2025 – Mar 2026</p>
+            </div>
+            <!-- Stats banner -->
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="stat-block">
+                        <h2 class="stat-number">2,77,000+</h2>
+                        <p>Problems Solved</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="stat-block">
+                        <h2 class="stat-number">1,300+</h2>
+                        <p>Students</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="stat-block">
+                        <h2 class="stat-number">15</h2>
+                        <p>Schools</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="stat-block">
+                        <h2 class="stat-number">76</h2>
+                        <p>Classes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key callout -->
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="results-callout">
+                        <h4>1,22,000 problems completed by students who got stuck, received step-by-step feedback, and worked through to the answer.</h4>
+                        <p>These are learning moments that would not exist with a textbook or a final-answer app. NudgeMath turned 80,000+ moments of struggle into completed learning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Context note -->
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <p style="color: #8899AA; font-size: 16px; font-style: italic;">
+                        All usage above was achieved without a teacher portal — through student-driven practice alone. With teacher-assigned work and progress tracking now available, we expect significantly higher engagement.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Engagement + Learning Outcomes -->
+            <div class="row flex-card-row" style="margin-top: 40px;">
+                <div class="col-lg-6 col-md-6">
+                    <div class="results-card">
+                        <h4>Engagement</h4>
+                        <ul>
+                            <li>Average <strong>131 problems per student</strong></li>
+                            <li><strong>33%</strong> of students solved 100+ problems</li>
+                            <li>Weekly returning users: <strong>28-39%</strong></li>
+                            <li>Across CBSE, ICSE, KV, and state board schools</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="results-card">
+                        <h4>Learning Outcomes</h4>
+                        <ul>
+                            <li><strong>1,22,093</strong> problems completed after getting help</li>
+                            <li><strong>80,974</strong> completed after significant struggle</li>
+                            <li><strong>56%</strong> solved independently</li>
+                            <li>Average errors per problem: <strong>1.08</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial -->
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p style="color: #8899AA; font-size: 18px; font-style: italic;">
+                        "Students loved using NudgeMath and recognized its potential to enhance their learning." — Teacher
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===================== PLANS ===================== -->
+    <section class="plans spad" id="plans">
+        <div class="container">
+            <div class="section-title center-title">
+                <span>Plans</span>
+                <h2>Choose What Works for Your School</h2>
+            </div>
+            <div class="row flex-card-row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="plan-card">
+                        <h3>Basic</h3>
+                        <p class="plan-subtitle">Structured Practice with Teacher Visibility</p>
+                        <ul class="plan-features">
+                            <li><i class="fa fa-check"></i> Step-by-step problem solving</li>
+                            <li><i class="fa fa-check"></i> Hints and error feedback at every step</li>
+                            <li><i class="fa fa-check"></i> Curriculum-aligned content (CBSE, ICSE, Cambridge)</li>
+                            <li><i class="fa fa-check"></i> Interactive tools: compass, protractor, ruler, fraction bars</li>
+                            <li><i class="fa fa-check"></i> Teacher portal — assign work & track progress</li>
+                            <li><i class="fa fa-check"></i> Student and class-level reports</li>
+                        </ul>
+                        <div class="plan-deploy">
+                            <p>Available as <strong>School Lab Only</strong> or <strong>School Lab + Home</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="plan-card plan-card--premium">
+                        <div class="plan-badge">Most Popular</div>
+                        <h3>Premium</h3>
+                        <p class="plan-subtitle">Everything in Basic, Plus Assessments</p>
+                        <ul class="plan-features">
+                            <li><i class="fa fa-check"></i> Everything in Basic</li>
+                            <li><i class="fa fa-check"></i> Test assignment through teacher portal</li>
+                            <li><i class="fa fa-check"></i> Automatic grading — no manual correction</li>
+                            <li><i class="fa fa-check"></i> Retry-practice based on errors, with hints enabled</li>
+                            <li><i class="fa fa-check"></i> Priority support</li>
+                        </ul>
+                        <div class="plan-deploy">
+                            <p>Available as <strong>School Lab Only</strong> or <strong>School Lab + Home</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="plan-card plan-card--addon">
+                        <h3>Premium+</h3>
+                        <p class="plan-subtitle">Available as an Add-On</p>
+                        <ul class="plan-features">
+                            <li><i class="fa fa-check"></i> Everything in Premium</li>
+                            <li><i class="fa fa-check"></i> Custom problem sets for your school's curriculum</li>
+                            <li><i class="fa fa-check"></i> School branding — your logo on the app</li>
+                            <li><i class="fa fa-check"></i> Student achievement certificates</li>
+                        </ul>
+                        <div class="plan-deploy">
+                            <p>For schools that want deeper ownership and personalisation</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-lg-6 col-md-12 text-center">
-                <img src="img/hero/hero-mascot.png" alt="NudgeMath Mascot" class="img-fluid"">
-                 
-        <div class="hero-highlight-bar">
-          <h4>Practice, But with a Difference</h4>
-          <p>Step-by-step math practice that nudges thinking — not guessing.</p>
-        </div>
-            </div>
-
-
-
-        </div>
-    </div>
-
-</section>
-
-
-
-
-    
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-
-
-<section class="services spad" id="about">
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title center-title">
-                    <span>Built for Deep Understanding</span>
-                    <h2>How NudgeMath Makes Learning Stick</h2>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-lg-12 text-center">
+                    <a href="#contact" class="site-btn" style="max-width: 300px; display: inline-block;">Start a Free Pilot</a>
+                    <p style="color: #8899AA; font-size: 15px; margin-top: 16px;">All plans start with a <strong style="color: #5BA3E6;">free 4-week pilot</strong>. No commitment required.</p>
                 </div>
             </div>
         </div>
-
-        <!-- 1st Row -->
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 col-md-12 text-center">
-                <div class="services__item__image" style="padding: 20px;">
-                    <img src="img/features/step-by-step.jpg" alt="Step-by-Step Problem Solving" loading="lazy"
-                         style="border: 3px solid #69c0ff; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); max-width: 90%; transform: rotate(-5deg);">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="services__item__text">
-                    <h4>Step-by-Step Problem Solving</h4>
-                    <p><strong>Children drive every step</strong> — we only <strong>nudge</strong> them when they’re stuck, so they stay <strong>confident</strong> and <strong>learn the right way</strong>.</p>
-                </div>
-            </div>
-        </div>
-        <hr class="feature-separator">
-
-        <!-- 2nd Row -->
-        <div class="row align-items-center flex-row-reverse mb-5">
-            <div class="col-lg-6 col-md-12 text-center">
-                <div class="services__item__image" style="padding: 20px;">
-                    <img src="img/features/work-on-paper.jpg" alt="Work As If On Paper" loading="lazy"
-                         style="border: 3px solid #69c0ff; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); max-width: 90%; transform: rotate(-5deg);">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="services__item__text">
-                    <h4>Work as You Would on Paper</h4>
-                    <p>Not just a graph here or a drag-and-drop there — <strong>every Common Core topic</strong>, from <strong>constructions</strong> to <strong>line plots</strong> to <strong>long division</strong>, solved <strong>step-by-step, interactively</strong>.</p>
-                </div>
-            </div>
-        </div>
-        <hr class="feature-separator">
-
-        <!-- 3rd Row -->
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 col-md-12 text-center">
-                <div class="services__item__image" style="padding: 20px;">
-                    <img src="img/features/hints.jpg" alt="Hints" loading="lazy"
-                         style="border: 3px solid #69c0ff; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); max-width: 90%; transform: rotate(-5deg);">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="services__item__text">
-                    <h4>No Passive Learning, Only Active Thinking</h4>
-                    <p>No <strong>videos</strong>. Just <strong>active problem-solving</strong>, hint-by-hint — students <strong>think, not watch</strong>.</p>
-                </div>
-            </div>
-        </div>
-        <hr class="feature-separator">
-
-        <!-- 4th Row -->
-        <div class="row align-items-center flex-row-reverse mb-5">
-            <div class="col-lg-6 col-md-12 text-center">
-                <div class="services__item__image" style="padding: 20px;">
-                    <img src="img/features/mastery.jpg" alt="Mastery Without Shortcuts" loading="lazy"
-                         style="border: 3px solid #69c0ff; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); max-width: 90%; transform: rotate(-5deg);">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="services__item__text">
-                    <h4>Focused Learning, Deep Understanding</h4>
-                    <p>No <strong>distractions</strong>. No <strong>dumbing down</strong>. We <strong>respect</strong> every child’s <strong>ability to learn deeply</strong>.</p>
-                </div>
-            </div>
-        </div>
-        <hr class="feature-separator">
-
-        <!-- 5th Row -->
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 col-md-12 text-center">
-                <div class="services__item__image" style="padding: 20px;">
-                    <img src="img/features/visual-fraction.jpg" alt="Visual Fractions" loading="lazy"
-                         style="border: 3px solid #69c0ff; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); max-width: 90%; transform: rotate(-5deg);">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="services__item__text">
-                    <h4>Visual Reinforcement by Design</h4>
-                    <p><strong>Fractions</strong> aren’t just numbers — students <strong>add</strong>, <strong>multiply</strong>, <strong>divide</strong>, and <strong>compare them visually</strong>.</p>
-                </div>
-            </div>
-        </div>
-        <hr class="feature-separator">
-        
-        <!-- 6th Row -->
-        <div class="row align-items-center flex-row-reverse mb-5">
-          <div class="col-lg-6 col-md-12 text-center">
-            <div class="services__item__image" style="padding: 20px;">
-              <img src="img/features/badges.jpg"
-                   loading="lazy"
-                   style="border: 3px solid #69c0ff; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); max-width: 90%; transform: rotate(-5deg);">
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="services__item__text">
-              <h4>Measurable Outcomes</h4>
-              <p>Badges aren’t <em>lollipops for the ego</em>. Students earn them only when they solve a set of problems <strong>independently</strong>—no hints, no errors.</p>
-              <p>On earning <strong>Proficient</strong>, they can <strong>move to the next set</strong> or <strong>practice more</strong>. <strong>Champion</strong> recognizes sustained mastery.</p>
-            </div>
-          </div>
-        </div>
-
-        
-
-    </div>
-</section>
+    </section>
 
 
 
-
-
-
-
+    <!-- ===================== GALLERY (PRESERVED AS-IS) ===================== -->
     <section class="portfolio spad" id="gallery">
         <div class="container">
             <div class="row">
@@ -343,7 +583,6 @@
                         </div>
                         <div class="portfolio__item__text">
                             <h4>No Guesswork — Solve Step-by-Step, the Right Way</h4>
-                            
                         </div>
                     </div>
                 </div>
@@ -354,7 +593,6 @@
                         </div>
                         <div class="portfolio__item__text">
                             <h4>Carry Smart, Borrow Right — Multi-Digit Math Made Simple</h4>
-                            
                         </div>
                     </div>
                 </div>
@@ -365,7 +603,6 @@
                         </div>
                         <div class="portfolio__item__text">
                             <h4>Understand Division Visually — Build to Long Division with Ease</h4>
-                            
                         </div>
                     </div>
                 </div>
@@ -376,7 +613,6 @@
                         </div>
                         <div class="portfolio__item__text">
                             <h4>Hands-On Geometry — Draw, Measure, and Reason</h4>
-                            
                         </div>
                     </div>
                 </div>
@@ -387,7 +623,6 @@
                         </div>
                         <div class="portfolio__item__text">
                             <h4>Fractions You Visualize — Not Just Memorize</h4>
-                            
                         </div>
                     </div>
                 </div>
@@ -398,7 +633,6 @@
                         </div>
                         <div class="portfolio__item__text">
                             <h4>See the Story in the Data — Line Plots and Graphs</h4>
-                            
                         </div>
                     </div>
                 </div>
@@ -409,7 +643,6 @@
                         </div>
                         <div class="portfolio__item__text">
                             <h4>See, Count, Calculate — Master Area and Volume</h4>
-                            
                         </div>
                     </div>
                 </div>
@@ -430,424 +663,189 @@
                         </div>
                         <div class="portfolio__item__text">
                             <h4>Mistakes Are Just Lessons — In Disguise</h4>
-                            
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>
     </section>
-    
-
-
-<!-- <section class="flow-section spad" style="background-color: #002855;" id="schools">
-  <div class="container">
-    <div class="section-title center-title">
-      <span style="color: #89c9f4;">For Schools</span>
-      <h2 style="color: #ffffff;">Bring NudgeMath to Your School</h2>
-    </div>
-
-    <div class="flow-grid">
-      <div class="flow-item">
-        <div class="flow-number">1</div>
-        <div class="flow-icon">
-          <img src="img/icons/assign.png" alt="Teachers Assign">
-        </div>
-        <h4>Teachers Assign</h4>
-        <p>Teachers select and assign practice problems tailored to their students’ needs.</p>
-      </div>
-
-      <div class="flow-item">
-        <div class="flow-number">2</div>
-        <div class="flow-icon">
-          <img src="img/icons/solve.png" alt="Students Solve">
-        </div>
-        <h4>Students Solve</h4>
-        <p>Students practice step-by-step at their own pace, just like solving on paper.</p>
-      </div>
-
-      <div class="flow-item">
-        <div class="flow-number">3</div>
-        <div class="flow-icon">
-          <img src="img/icons/reports.png" alt="Teachers Get Reports">
-        </div>
-        <h4>Teachers Get Reports</h4>
-        <p>Detailed reports help teachers track progress, identify gaps, and personalize feedback.</p>
-      </div>
-
-      <div class="flow-item">
-        <div class="flow-number">4</div>
-        <div class="flow-icon">
-          <img src="img/icons/next.png" alt="Next Assignments">
-        </div>
-        <h4>Next Assignments</h4>
-        <p>Teachers use insights to create the next set of personalized assignments, closing learning gaps.</p>
-      </div>
-    </div>
-
-    
-    <div class="flow-summary">
-      <h4>With just a quick nudge or reminder after lessons, teachers help students build lasting practice habits — without extra effort.</h4>
-      <a href="#">Request a Demo</a>
-    </div>
-
-
-    </div>
-</section> -->
-
-<section class="flow-section spad" style="background-color: #002855;" id="schools">
-  <div class="container">
-    <div class="section-title center-title">
-      <span style="color: #89c9f4;">For Schools</span>
-      <h2 style="color: #ffffff;">Bring NudgeMath to Your School</h2>
-    </div>
-
-    <div class="flow-grid">
-      <div class="flow-item">
-        <div class="flow-number">1</div>
-        <div class="flow-icon">
-          <img src="img/icons/assign.png" alt="Teachers Assign">
-        </div>
-        <h4>Teachers Assign</h4>
-        <p>Teachers select and assign <strong>practice problems</strong> tailored to their students’ needs.</p>
-      </div>
-
-      <div class="flow-item">
-        <div class="flow-number">2</div>
-        <div class="flow-icon">
-          <img src="img/icons/solve.png" alt="Students Solve">
-        </div>
-        <h4>Students Solve</h4>
-        <p>Students practice <strong>step-by-step</strong> at their own pace, just like solving on paper.</p>
-      </div>
-
-      <div class="flow-item">
-        <div class="flow-number">3</div>
-        <div class="flow-icon">
-          <img src="img/icons/reports.png" alt="Teachers Get Reports">
-        </div>
-        <h4>Teachers Get Reports</h4>
-        <p>Detailed reports help teachers <strong>track progress</strong>, identify gaps, and personalize feedback.</p>
-      </div>
-
-      <div class="flow-item">
-        <div class="flow-number">4</div>
-        <div class="flow-icon">
-          <img src="img/icons/next.png" alt="Next Assignments">
-        </div>
-        <h4>Next Assignments</h4>
-        <p>Teachers use insights to create the <strong>next set of personalized assignments</strong>, closing learning gaps.</p>
-      </div>
-    </div>
-
-    <!-- Highlights Card -->
-    <!-- <div class="pilot-highlight-card">
-      <h4>Highlights from Schools</h4>
-      <p>Students often worked out <strong>100+ problems weekly</strong>.</p>
-      <p>Many students solved <strong>200+ problems</strong> in a week.</p>
-      <p>A <strong>resounding yes</strong> when asked if they would recommend NudgeMath to friends.</p>
-      <p style="margin-top: 1.5rem; font-style: italic;">“Students loved using NudgeMath and saw its potential in helping them learn more effectively.”</p>
-    </div> -->
-
-<div class="pilot-highlight-card">
-  <h4>What We Observed at Schools</h4>
-  <ul class="highlight-list">
-    <li>Students regularly solved over <strong>100 problems per week</strong>.</li>
-    <li>Many completed over <strong>200 problems weekly</strong>.</li>
-    <li>Students overwhelmingly said <strong>“yes”</strong> when asked if they would recommend NudgeMath.</li>
-    <li><em>“Students loved using NudgeMath and recognized its potential to enhance their learning.”</em> — <strong>Teacher Feedback</strong></li>
-  </ul>
-</div>
-
-
-    <!-- Flow Summary -->
-    <div class="flow-summary">
-      <h4 style="color: #f0f0f0;">With just a quick nudge or reminder after lessons, teachers help students build lasting practice habits — without extra effort.</h4>
-      <a href="./index.html#contact" style="margin-top: 20px;" class="primary-btn">Request a Demo</a>
-    </div>
-
-  </div>
-</section>
 
 
 
-<section class="services spad" style="background-color: #00356d;"  id="parents">
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-lg-4">
-                <div class="services__title">
-                    <div class="section-title">
-                        <span style="color: #89c9f4;">For Parents</span>
-                        <h2 style="color: #ffffff;">NudgeMath is built to guide — gently, without hindering their discovery</h2>
-                    </div>
-                    <div class="store-buttons" style="display: flex; justify-content: left; gap: 10px;">
-                        <a href="https://apps.apple.com/us/app/nudgemath/id6739328770" class="store-btn">
-                            <img src="img/stores/app-store.svg" alt="Download on App Store" style="height: 80px; width: auto;">
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.benciti.nudgemath" class="store-btn">
-                            <img src="img/stores/play-store.svg" alt="Download on Play Store" style="height: 80px; width: auto;">
-                        </a>
-                    </div>
-                </div>
+    <!-- ===================== HOME & INDEPENDENT LEARNING ===================== -->
+    <section class="home-learning spad" id="home-learning">
+        <div class="container">
+            <div class="section-title center-title">
+                <span>Beyond the Classroom</span>
+                <h2>Home &amp; Independent Learning</h2>
             </div>
-
-            
-            <div class="col-lg-8">
-                <div class="row">
-                    
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="services__item">
-                            <div class="services__item__icon">
-                                <img src="img/icons/learn.png" alt="L">
-                            </div>
-                            <h4>Learn How to Learn</h4>
-                            <p>Step-by-step learning that encourages self-discovery and builds independence.</p>
-                        </div>
-                    </div>
-
-                    
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="services__item">
-                            <div class="services__item__icon">
-                                <img src="img/icons/guide.png" alt="G">
-                            </div>
-                            <h4>Built to Guide</h4>
-                            <p>Guided practice with smart hints and feedback — helping children stay motivated and confident.</p>
-                        </div>
-                    </div>
-
-                    
-                    <div class="col-lg-12 text-center" style="margin-top: 40px;">
-    <img src="img/features/welcome_4.png" alt="Report Screenshot" style="max-width: 80%; height: auto; border: 4px solid #00ffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-    <p style="color: #d0d8e8; margin-top: 1rem;">NudgeMath lets you be a part of your child's math journey.</p>
-</div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="testimonial spad set-bg" style="background-color: #002855;" id="testimonials">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-title center-title">
-            <span style="color: #89c9f4;">Voices That Count</span>
-          <h2>Students in Their Own Creative Words About NudgeMath</h2>
-        </div>
-      </div>
-    </div>
-
-        
-<div class="row">
-    <div class="testimonial__slider owl-carousel">
-        
-        <div class="testimonial__item">
-            <div class="testimonial__text">
-                <p>"You should really download this app! It’s <strong>fun and interactive</strong> to use."</p>
-            </div>
-        </div>
-
-        <div class="testimonial__item">
-            <div class="testimonial__text">
-                <p>"I would tell that it is a <strong>very good app</strong>. It would improve you a lot and also help you <strong>prepare for your exam</strong>."</p>
-            </div>
-        </div>
-
-        <div class="testimonial__item">
-            <div class="testimonial__text">
-                <p>"I would say that it is <strong>incredibly easy to use</strong>."</p>
-            </div>
-        </div>
-
-        <div class="testimonial__item">
-            <div class="testimonial__text">
-                <p>"The <strong>app is amazing</strong> and it lets you have a <strong>quick and fun revision</strong>."</p>
-            </div>
-        </div>
-
-        <div class="testimonial__item">
-            <div class="testimonial__text">
-                <p>"It is <strong>better than other math apps</strong>."</p>
-            </div>
-        </div>
-
-        <div class="testimonial__item">
-            <div class="testimonial__text">
-                <p>"It is a <strong>great app</strong> to use to learn math and it would be great if it was available for other subjects."</p>
-            </div>
-        </div>
-
-        <div class="testimonial__item">
-            <div class="testimonial__text">
-                <p>"It's so cool! You should try it out and <strong>the chapters are so fun to do</strong>! So you wanna do it with me?"</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-    </div>
-</section>
-
-<footer class="footer" style="background-color: #00356d; padding-top: 60px;" id="contact">
-  <div class="container">
-      
-    <!-- Get in Touch Form -->
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-8">
-        <div class="contact__form text-center">
-          <h3 style="color: #ffffff;">Get in Touch</h3>
-          <form action="https://formsubmit.co/7112436955ca83de7a61eea285576c81" method="POST">
-            <input type="text" name="usrname" placeholder="Name" required>
-            <input type="email" name="usremail" placeholder="Email" required>
-            <textarea name="usrmessage" placeholder="Message" required></textarea>
-
-            <!-- Hidden Fields for Formsubmit -->
-            <input type="hidden" name="_subject" value="New message from NudgeMath site">
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="true">
-            <input type="hidden" name="_next" value="https://nudgemath.com/thank-you.html">
-            
-
-            <button type="submit" class="site-btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- End Get in Touch Form -->
-
-     <!-- Footer Options -->
-    <div class="footer__option">
-      <div class="row">
-        <div class="col-lg-6 col-md-6">
-          <div class="footer__option__item">
-            <h5>About NudgeMath</h5>
-            <p>We're passionate about helping every child discover an aptitude for math and developing independent and critical thought.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-6">
-          <div class="footer__option__item">
-            <h5>Contact</h5>
-            <ul>
-              <li><i class="fa fa-phone"></i> +91 9886719974</li>
-              <li><i class="fa fa-envelope"></i> support@benciti.com</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Top (Logo + Socials) -->
-    <div class="footer__top" style="margin-top: 50px;">
-      <div class="row justify-content-between align-items-center">
-        <div class="col-lg-6 col-md-6 text-center text-md-left">
-          <div class="footer__top__logo">
-            <a href="#"><img src="img/logo.png" alt="NudgeMath Logo" style="max-width: 150px;"></a>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 text-center text-md-right">
-          <div class="footer__top__social">
-            <a href="https://www.facebook.com/NudgeMath" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/company/benciti-technology-pvt-ltd" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a href="https://x.com/NudgeMath" target="_blank"><i class="fa fa-twitter"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Copyright -->
-    <div class="footer__copyright" style="margin-top: 30px;">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <p class="footer__copyright__text">
-            Copyright &copy; <script>document.write(new Date().getFullYear());</script>
-            All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by 
-            <a href="https://colorlib.com" target="_blank">Colorlib</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</footer>
-
-
-
-<!-- <footer class="footer" style="background-color: #00356d;"  id="contact">
-    <div class="container">
-        <div class="footer__top">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-6 col-md-6">
-                    <div class="footer__top__logo">
-                        <a href="#"><img src="img/logo.png" alt="NudgeMath Logo"></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 text-center text-md-right">
-                    <div class="footer__top__social">
-                        <a href="https://www.facebook.com/NudgeMath" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/company/benciti-technology-pvt-ltd" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://x.com/NudgeMath"><i class="fa fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer__option">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="footer__option__item">
-                        <h5>About NudgeMath</h5>
-                        <p>We're passionate about helping every child discover an aptitude for math and developing independent and critical thought.</p>
+                <div class="col-lg-12 text-center" style="margin-bottom: 30px;">
+                    <p style="color: #8899AA; font-size: 18px;">Any adult invested in a child's math practice can subscribe — parents, homeschooling families, or tutoring centres.</p>
+                </div>
+            </div>
+            <div class="row flex-card-row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="home-learning-card">
+                        <div class="home-learning-icon"><i class="fa fa-home"></i></div>
+                        <h4>For Parents</h4>
+                        <p>Give your child structured math practice at home — with step-by-step solving and instant feedback. Real work, real progress, no screen time guilt.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="footer__option__item">
-                        <h5>Contact</h5>
-                        <ul>
-                            <li><i class="fa fa-phone"></i> +91 9886719974</li>
-                            <li><i class="fa fa-envelope"></i> support@benciti.com</li>
-                        </ul>
+                <div class="col-lg-4 col-md-4">
+                    <div class="home-learning-card">
+                        <div class="home-learning-icon"><i class="fa fa-book"></i></div>
+                        <h4>For Homeschooling Families</h4>
+                        <p>A complete, curriculum-aligned math practice system. Self-paced, with step-by-step guidance and instant error correction — no parent-led instruction needed for practice.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="home-learning-card">
+                        <div class="home-learning-icon"><i class="fa fa-users"></i></div>
+                        <h4>For Tuition Centres &amp; Coaching Institutes</h4>
+                        <p>Use NudgeMath with your students to deliver structured, step-by-step practice. Earn through our <strong style="color: #5BA3E6;">Partner Incentive Program</strong> as you help spread effective math practice in your community.</p>
+                        <a href="#contact" class="home-learning-link">Learn about the Partner Program &rarr;</a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="footer__copyright">
+
+
+    <!-- ===================== GETTING STARTED ===================== -->
+    <section class="getting-started spad" id="getting-started">
+        <div class="container">
+            <div class="section-title center-title">
+                <span style="color: #5BA3E6;">Get Started</span>
+                <h2 style="color: #ffffff;">Three Steps to NudgeMath in Your School</h2>
+            </div>
             <div class="row">
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="step-block">
+                        <div class="step-number">1</div>
+                        <h4>See a Demo</h4>
+                        <p>We walk your teachers through the student app and teacher portal. 30 minutes, online.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="step-block">
+                        <div class="step-number">2</div>
+                        <h4>4-Week Free Pilot</h4>
+                        <p>Deploy in 1-2 sections. Real students, real data, no cost, no commitment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="step-block">
+                        <div class="step-number">3</div>
+                        <h4>Review &amp; Decide</h4>
+                        <p>We share a usage summary — problems solved, engagement, learning patterns. You decide.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 40px;">
                 <div class="col-lg-12 text-center">
-                    
-                    <p class="footer__copyright__text">Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script>
-                        All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by 
-                        <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                    </p>
-                    
+                    <a href="#contact" class="site-btn" style="max-width: 350px;">Start a Free School Pilot</a>
                 </div>
             </div>
         </div>
-    </div>
-</footer> -->
+    </section>
 
 
 
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer" id="contact">
+        <div class="container">
 
-    
-    
-            
-                        
-                        
-                        
-                    
-    
+            <!-- Get in Touch Form -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="contact__form text-center">
+                        <h3 style="color: #ffffff;">Get in Touch</h3>
+                        <p style="color: #8899AA; margin-bottom: 20px;">Interested in a pilot? Have questions? Drop us a message.</p>
+                        <form action="https://formsubmit.co/7112436955ca83de7a61eea285576c81" method="POST">
+                            <input type="text" name="usrname" placeholder="Name" required>
+                            <input type="email" name="usremail" placeholder="Email" required>
+                            <textarea name="usrmessage" placeholder="Message" required></textarea>
 
-    
+                            <input type="hidden" name="_subject" value="New message from NudgeMath site">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="hidden" name="_next" value="https://nudgemath.com/thank-you.html">
+
+                            <button type="submit" class="site-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Options -->
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="footer__option__item">
+                            <h5>NudgeMath for Schools</h5>
+                            <p>Structured math practice that ensures every student completes every problem — because they get step-by-step support exactly when they need it.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="footer__option__item">
+                            <h5>Links</h5>
+                            <ul>
+                                <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="./terms-conditions.html">Terms &amp; Conditions</a></li>
+                                <li><a href="./story.html">Our Story</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="footer__option__item">
+                            <h5>Contact</h5>
+                            <ul>
+                                <li><i class="fa fa-phone"></i> +91 9886719974</li>
+                                <li><i class="fa fa-envelope"></i> support@benciti.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Top (Logo + Socials) -->
+            <div class="footer__top" style="margin-top: 50px;">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-6 col-md-6 text-center text-md-left">
+                        <div class="footer__top__logo">
+                            <a href="#"><img src="img/logo.png" alt="NudgeMath Logo" style="max-width: 150px;"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 text-center text-md-right">
+                        <div class="footer__top__social">
+                            <a href="https://www.facebook.com/NudgeMath" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/company/benciti-technology-pvt-ltd" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://x.com/NudgeMath" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer__copyright" style="margin-top: 30px;">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p class="footer__copyright__text">
+                            Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+                            All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                            <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>

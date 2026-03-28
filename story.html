@@ -1,173 +1,340 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="NudgeMath Story" name="description"/>
-<meta content="NudgeMath, Our Story, Common Core Math, Learning App" name="keywords"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>NudgeMath | Our Story</title>
-<link href="img/favicon.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-<link href="css/style.css" rel="stylesheet" type="text/css"/>
-<style>
-.services__item__text h4 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-html {
-    scroll-behavior: smooth;
-}
-</style></head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The NudgeMath Story — from an engineer's passion for teaching to a structured math practice platform trusted by schools.">
+    <meta name="keywords" content="NudgeMath, Our Story, Math Practice, EdTech, School Math">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NudgeMath | Our Story</title>
+    <link rel="icon" type="image/png" href="img/favicon.png?v=2">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        .story-hero {
+            background: #ECEEF1;
+            padding: 130px 0 60px;
+            text-align: center;
+        }
+        .story-hero h2 {
+            color: #0A51A8;
+            font-size: 38px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        .story-hero p {
+            color: #4A5568;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .story-section {
+            padding: 70px 0;
+        }
+        .story-section-dark {
+            background: #272838;
+        }
+        .story-section-darker {
+            background: #1E1F2B;
+        }
+        .story-content h4 {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: -0.3px;
+        }
+        .story-content p {
+            color: #B0BEC5;
+            font-size: 15px;
+            line-height: 28px;
+        }
+        .story-content p strong {
+            color: #ffffff;
+        }
+        .story-content .highlight-quote {
+            font-style: italic;
+            font-size: 18px;
+            color: #5BA3E6;
+            margin-top: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #0A51A8;
+        }
+        .founder-img {
+            width: 220px;
+            border-radius: 50%;
+            border: 5px solid #2E2F42;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+        .story-video-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 75%;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #1E1F2B;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+        .story-video-wrap img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        .story-video-wrap .play-btn {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .story-cta {
+            background: #0A51A8;
+            padding: 70px 0;
+            text-align: center;
+        }
+        .story-cta h4 {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .story-cta p {
+            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        .story-cta .site-btn {
+            background: #ffffff !important;
+            color: #0A51A8 !important;
+            max-width: 300px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
 <body>
-<div id="preloder">
-<div class="loader"></div>
-</div>
-<header class="header">
-<div class="container">
-<div class="row align-items-center">
-<div class="col-lg-2 col-6">
-<div class="header__logo">
-<a href="./index.html"><img alt="NudgeMath Logo" src="img/logo.png"/></a>
-</div>
-</div>
-<div class="col-lg-10 col-6">
-<div class="header__nav__option d-flex justify-content-end">
-<nav class="header__nav__menu mobile-menu">
-<ul><li><a href="./index.html">Home</a></li><li><a href="#journey">Journey</a></li><li><a href="#experiments">Experiments</a></li><li><a href="#classroom">Built For Schools</a></li><li><a href="#ahead">What's Ahead</a></li></ul>
-</nav>
-<div class="header__nav__social ml-3">
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-linkedin"></i></a>
-</div>
-</div>
-</div>
-</div>
-<div id="mobile-menu-wrap"></div>
-</div>
-</header>
-<div class="breadcrumb-option spad set-bg" data-setbg="img/hero/hero-bg.png">
-<div class="container">
-<div class="row">
-<div class="col-lg-12 text-center">
-<div class="breadcrumb__text">
-<h2>The NudgeMath Story</h2>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section class="services spad">
-  <div class="container">
-    <!-- Journey Section -->
-    <div class="services__item__text">
-      <h4 id="journey">My Journey to NudgeMath</h4>
 
-      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-bottom: 20px;">
-        <div style="flex: 0 0 auto;">
-          <img src="img/padma-photo.jpg" alt="Padma" style="width: 300px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); border: 6px solid #e0e8f0;">
-        </div>
-        <div style="flex: 1;">
-          <p>Hi, I’m <strong>Padma</strong> — an engineer by training, an educator by passion, and someone who believes every child can thrive in math with the right support.</p>
-          <p>After completing my <strong>Master’s in Electronics and Communication Engineering</strong> from <strong>IISc Bangalore</strong>, I spent <strong>16 years at Motorola</strong>, primarily working in <strong>signal processing</strong>. During that time, I was fortunate to be granted <strong>seven US patents</strong>.</p>
-        </div>
-      </div>
-
-      <p>Alongside my professional career, I nurtured a deep interest in <strong>teaching children</strong>. I spent many hours tutoring informally, and my curiosity about how children learn led me to pursue a <strong>diploma in child psychology</strong>.</p>
-      <p>This unique intersection of <strong>technology, education, and psychology</strong> set me on a new mission — to build software that helps children not just solve problems, but truly understand math.</p>
-      <p>That’s how the journey of <strong>NudgeMath</strong> began.</p>
+    <div id="preloder">
+        <div class="loader"></div>
     </div>
 
-    <hr class="feature-separator"/>
-
-    <!-- Early Experiments Section -->
-    <div class="row section-content mb-5">
-      <div class="col-lg-12">
-        <div class="services__item__text">
-          <h4 id="experiments">Early Experiments</h4>
-          <p>I hit upon the idea of creating an app that would gently <strong>nudge children forward</strong> — offering just enough help at the right moment, while allowing them to <strong>solve problems step by step</strong> independently. It was about building confidence, not just getting the right answer.</p>
-          <p>We began with an app called <strong>AlgebraOnNudge</strong>, focused on helping students work through <strong>linear equations</strong> and <strong>word problems</strong>. Here are a couple of demos:</p>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="NudgeMath"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li class="active"><a href="./story.html">Our Story</a></li>
+                                <li><a href="#schools">For Schools</a></li>
+                                <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="./index.html#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
         </div>
-      </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="story-hero">
+        <div class="container">
+            <h2>The NudgeMath Story</h2>
+            <p>From an engineer's passion for teaching to a platform trusted by schools</p>
+        </div>
     </div>
 
-    <!-- Videos -->
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-5 col-md-6 text-center mb-4">
-        <div class="portfolio__item__video" style="position: relative; width: 100%; padding-top: 75%; overflow: hidden; border-radius: 8px; background-color: #002855;">
-          <img alt="Nudge Algebra Demo" src="img/nudgealgebra1.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-          <a class="play-btn video-popup" href="https://www.youtube.com/watch?v=QC91ITzI6j4" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; border: none;">
-            <i class="fa fa-youtube-play" style="font-size: 48px; color: red;"></i>
-          </a>
+    <!-- Journey -->
+    <section class="story-section story-section-dark" id="journey">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-4 text-center" style="margin-bottom: 30px;">
+                    <img src="img/padma-photo.jpg" alt="Padma" class="founder-img">
+                </div>
+                <div class="col-lg-9 col-md-8">
+                    <div class="story-content">
+                        <h4>My Journey to NudgeMath</h4>
+                        <p>Hi, I'm <strong>Padma</strong> — an engineer by training, an educator by passion, and someone who believes every child can thrive in math with the right support.</p>
+                        <p>After completing my <strong>Master's in Electronics and Communication Engineering</strong> from <strong>IISc Bangalore</strong>, I spent <strong>16 years at Motorola</strong>, primarily working in signal processing. During that time, I was fortunate to be granted <strong>seven US patents</strong>.</p>
+                        <p>Alongside my professional career, I nurtured a deep interest in <strong>teaching children</strong>. I spent many hours tutoring informally, and my curiosity about how children learn led me to pursue a <strong>diploma in child psychology</strong>.</p>
+                        <p>This unique intersection of <strong>technology, education, and psychology</strong> set me on a new mission — to build software that helps children not just solve problems, but truly understand math.</p>
+                        <p>That's how the journey of <strong>NudgeMath</strong> began.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-5 col-md-6 text-center mb-4">
-        <div class="portfolio__item__video" style="position: relative; width: 100%; padding-top: 75%; overflow: hidden; border-radius: 8px; background-color: #002855;">
-          <img alt="Nudge Algebra Demo" src="img/nudgealgebra2.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
-          <a class="play-btn video-popup" href="https://www.youtube.com/watch?v=j0yz_QsMUiA" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; border: none;">
-            <i class="fa fa-youtube-play" style="font-size: 48px; color: red;"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="row section-content mb-5">
-      <div class="col-lg-12">
-        <div class="services__item__text">
-          <p><strong>AlgebraOnNudge</strong> was well-received. But we saw a greater opportunity — to bring the same step-by-step clarity into the school setting by aligning the experience closely with what students were learning in class. That insight laid the foundation for building a full learning platform.</p>
+    <!-- Early Experiments -->
+    <section class="story-section story-section-darker" id="experiments">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="story-content">
+                        <h4>Early Experiments</h4>
+                        <p>I hit upon the idea of creating an app that would gently <strong>nudge children forward</strong> — offering just enough help at the right moment, while allowing them to <strong>solve problems step by step</strong> independently. It was about building confidence, not just getting the right answer.</p>
+                        <p>We began with an app called <strong>AlgebraOnNudge</strong>, focused on helping students work through <strong>linear equations</strong> and <strong>word problems</strong>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 30px;">
+                <div class="col-lg-5 col-md-6 text-center" style="margin-bottom: 30px;">
+                    <div class="story-video-wrap">
+                        <img alt="AlgebraOnNudge Demo" src="img/nudgealgebra1.jpg">
+                        <a class="play-btn video-popup" href="https://www.youtube.com/watch?v=QC91ITzI6j4">
+                            <i class="fa fa-youtube-play" style="font-size: 48px; color: #FF0000;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 text-center" style="margin-bottom: 30px;">
+                    <div class="story-video-wrap">
+                        <img alt="AlgebraOnNudge Demo" src="img/nudgealgebra2.png">
+                        <a class="play-btn video-popup" href="https://www.youtube.com/watch?v=j0yz_QsMUiA">
+                            <i class="fa fa-youtube-play" style="font-size: 48px; color: #FF0000;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-12">
+                    <div class="story-content">
+                        <p><strong>AlgebraOnNudge</strong> was well-received. But we saw a greater opportunity — to bring the same step-by-step clarity into the school setting by aligning the experience closely with what students were learning in class. That insight laid the foundation for building a full learning platform.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-
-    <hr class="feature-separator"/>
+    </section>
 
     <!-- Built for the Classroom -->
-    <div class="row section-content mb-5 justify-content-center">
-      <div class="col-lg-12">
-        <div class="services__item__text">
-          <h4 id="classroom">Built for the Classroom. Shaped by Real-World Use.</h4>
-          <p>We set out to build NudgeMath as a <strong>complete and comprehensive solution</strong> — a tool that students can use daily across the school year, and teachers can rely on for targeted intervention, practice, and insights.</p>
-          <p>This led us to develop a robust <strong>Math Engine</strong> and an intuitive <strong>UI Engine</strong> capable of handling a wide range of topics — from <strong>long division</strong> to <strong>geometric constructions</strong> using compass and protractor, to <strong>complex multi-step word problems</strong> — all <strong>step-by-step and interactive</strong>.</p>
-          <p>We first launched the NudgeMath <strong>Grade 6 CBSE app</strong>, which was used both at home by students and in <strong>pilot programs with schools</strong>.</p>
-          <p>We have now launched a completely new version for <strong>Grades 4 and 5</strong>, aligned with the <strong>Common Core</strong> curriculum. Support for <strong>CBSE, ICSE, and IGCSE</strong> is coming soon. But this is just the beginning — we aim to support <strong>more grades</strong> and <strong>more curricula</strong> in the near future.</p>
-          <p>With feedback from <strong>teachers and students</strong> during our <strong>first iteration</strong>, we built the <strong>new NudgeMath app</strong> — ensuring it addresses what truly helps learners progress.</p>
+    <section class="story-section story-section-dark" id="classroom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="story-content">
+                        <h4>Built for the Classroom. Shaped by Real-World Use.</h4>
+                        <p>We set out to build NudgeMath as a <strong>complete and comprehensive solution</strong> — a tool that students can use daily across the school year, and teachers can rely on for targeted intervention, practice, and insights.</p>
+                        <p>This led us to develop a robust <strong>Math Engine</strong> and an intuitive <strong>UI Engine</strong> capable of handling a wide range of topics — from <strong>long division</strong> to <strong>geometric constructions</strong> using compass and protractor, to <strong>complex multi-step word problems</strong> — all step-by-step and interactive.</p>
+                        <p>We first launched the NudgeMath <strong>Grade 6 CBSE app</strong>, which was used both at home by students and in <strong>pilot programs with schools</strong>.</p>
+                        <p>We have now launched a completely new version for <strong>Grades 4, 5 and 6</strong>, aligned with <strong>CBSE, ICSE, Cambridge, and Common Core</strong> curricula. But this is just the beginning — we aim to support more grades and more curricula in the near future.</p>
+                        <p>With feedback from <strong>teachers and students</strong> during our first iteration, we built the new NudgeMath app — ensuring it addresses what truly helps learners progress.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <hr class="feature-separator"/>
+    <!-- NudgeMath for Schools -->
+    <section class="story-section story-section-darker" id="schools">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="story-content">
+                        <h4>NudgeMath for Schools</h4>
+                        <p>Through our school pilots, a clear pattern emerged. Teachers wanted to <strong>assign problems for homework</strong> and receive reports on whether children had completed them. Students needed structured support that worked both in the <strong>school lab</strong> and <strong>at home</strong>.</p>
+                        <p>We listened — and significantly improved the platform. We introduced a <strong>Windows version</strong> so NudgeMath could run in school computer labs, and students could also use laptops at home for homework. The result is <strong>NudgeMath for Schools</strong> — a complete, teacher-driven practice system.</p>
+
+                        <h4 style="font-size: 20px; margin-top: 40px;">Teacher Portal</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="color: #B0BEC5; font-size: 15px; line-height: 28px; margin-bottom: 8px; padding-left: 22px; position: relative;"><span style="position: absolute; left: 0; color: #5BA3E6;">&#x2713;</span> Teachers can <strong>assign classwork and homework</strong> through the portal.</li>
+                            <li style="color: #B0BEC5; font-size: 15px; line-height: 28px; margin-bottom: 8px; padding-left: 22px; position: relative;"><span style="position: absolute; left: 0; color: #5BA3E6;">&#x2713;</span> Students work through assignments with <strong>step-by-step hints and error-based feedback</strong>, helping them complete the work even when they find it difficult.</li>
+                            <li style="color: #B0BEC5; font-size: 15px; line-height: 28px; margin-bottom: 8px; padding-left: 22px; position: relative;"><span style="position: absolute; left: 0; color: #5BA3E6;">&#x2713;</span> Teachers can clearly track <strong>who has started, who has completed, and how much help</strong> each student required.</li>
+                        </ul>
+
+                        <h4 style="font-size: 20px; margin-top: 40px;">Tests and Follow-up Practice</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="color: #B0BEC5; font-size: 15px; line-height: 28px; margin-bottom: 8px; padding-left: 22px; position: relative;"><span style="position: absolute; left: 0; color: #5BA3E6;">&#x2713;</span> Teachers can <strong>assign tests</strong> through the platform.</li>
+                            <li style="color: #B0BEC5; font-size: 15px; line-height: 28px; margin-bottom: 8px; padding-left: 22px; position: relative;"><span style="position: absolute; left: 0; color: #5BA3E6;">&#x2713;</span> Once students complete a test, they are <strong>graded automatically</strong>.</li>
+                            <li style="color: #B0BEC5; font-size: 15px; line-height: 28px; margin-bottom: 8px; padding-left: 22px; position: relative;"><span style="position: absolute; left: 0; color: #5BA3E6;">&#x2713;</span> Students then receive a <strong>follow-up practice set</strong> based on the questions they couldn't solve — with hints and step-by-step feedback enabled, so they <strong>learn from their mistakes right away</strong>.</li>
+                        </ul>
+
+                        <h4 style="font-size: 20px; margin-top: 40px;">Improved Problem Quality and Variety</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="color: #B0BEC5; font-size: 15px; line-height: 28px; margin-bottom: 8px; padding-left: 22px; position: relative;"><span style="position: absolute; left: 0; color: #5BA3E6;">&#x2713;</span> Many more <strong>higher-order thinking problems</strong> added.</li>
+                            <li style="color: #B0BEC5; font-size: 15px; line-height: 28px; margin-bottom: 8px; padding-left: 22px; position: relative;"><span style="position: absolute; left: 0; color: #5BA3E6;">&#x2713;</span> New engaging problem types such as <strong>crosswords and spotting patterns in a grid</strong>.</li>
+                            <li style="color: #B0BEC5; font-size: 15px; line-height: 28px; margin-bottom: 8px; padding-left: 22px; position: relative;"><span style="position: absolute; left: 0; color: #5BA3E6;">&#x2713;</span> Designed to <strong>keep children engaged</strong> without diluting procedural or conceptual learning.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- What Lies Ahead -->
-    <div class="row section-content mb-5 justify-content-center">
-      <div class="col-lg-12">
-        <div class="services__item__text">
-          <h4 id="ahead">What Lies Ahead</h4>
-          <p>We're just getting started. We plan to expand to <strong>more grades</strong>, <strong>different curricula</strong>, and continuously refine NudgeMath based on feedback from teachers, students, and parents. Our mission is to make <strong>deep learning</strong> accessible to every child.</p>
-          <p style="font-style: italic; font-size: 1.2rem; color: #89c9f4;">“If we can help more children experience the wonder of thinking mathematically, it will be truly transformative.”</p>
+    <section class="story-section story-section-dark" id="ahead">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="story-content">
+                        <h4>What Lies Ahead</h4>
+                        <p>We're just getting started. We plan to expand to <strong>more grades</strong>, <strong>different curricula</strong>, and continuously refine NudgeMath based on feedback from teachers, students, and parents. Our mission is to make <strong>deep learning</strong> accessible to every child.</p>
+                        <p class="highlight-quote">"If we can help more children experience the wonder of thinking mathematically, it will be truly transformative."</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="story-cta">
+        <div class="container">
+            <h4>Let's Nudge Math Together!</h4>
+            <p>Interested in bringing NudgeMath to your classroom or school? Let's connect.</p>
+            <a class="site-btn" href="./index.html#contact">Contact Us</a>
+        </div>
     </div>
 
-    <hr class="feature-separator"/>
+    <!-- Footer -->
+    <footer class="footer" style="padding-top: 40px;">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-6 col-md-6 text-center text-md-left">
+                        <div class="footer__top__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt="NudgeMath Logo" style="max-width: 150px;"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 text-center text-md-right">
+                        <div class="footer__top__social">
+                            <a href="https://www.facebook.com/NudgeMath" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/company/benciti-technology-pvt-ltd" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://x.com/NudgeMath" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright" style="margin-top: 20px;">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p class="footer__copyright__text">
+                            Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+                            All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                            <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Final CTA -->
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-lg-8">
-        <h4 style="color: #ffffff; font-weight: 700;">Let's Nudge Math Together!</h4>
-        <p style="color: #d0d8e8;">Interested in bringing NudgeMath to your classroom or school? Let's connect and make math learning deeper and more joyful.</p>
-        <a class="primary-btn" href="./index.html#contact">Contact Us</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
